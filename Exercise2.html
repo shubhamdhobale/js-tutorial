@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <script>
+        let user = prompt("Choose any one S, G or W")
+        let cpuI = math.floor(math.random() * 3);
+        let cpu = ["S", "W", "G"][cpuI]
+
+        const match = (cpu, user) => {
+            if (cpu === user) {
+                return "Nobody wins"
+            } else if (cpu == "S" && user == "w") {
+                return "cpu"
+            } else if (cpu == "S" && user == "G") {
+                return "user"
+            } else if (cpu == "w" && user == "G") {
+                return "cpu"
+            } else if (cpu == "w" && user == "s") {
+                return "user"
+            } else if (cpu == "G" && user == "S") {
+                return "cpu"
+            } else if (cpu == "G" && user == "W") {
+                return "user"
+            }
+        }
+
+        let result = match(cpu, user)
+        console.log(`CPU:${cpu}\n User:${user}\n Result will be:${result}`)
+    </script>
+</body>
+
+</html>
