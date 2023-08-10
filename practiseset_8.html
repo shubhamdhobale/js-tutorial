@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<style>
+    html {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .bulbcontainer {
+        height: 300px;
+        width: 300px;
+        background-color: #f20707;
+    }
+</style>
+
+<body>
+
+    <button onclick="alert('hey1')"> click me1 </button>
+    <button onclick="alert('hey2')"> click me2 </button>
+    <button onclick="alert('hey3')"> click me3</button>
+
+    <h1>BookMarks</h1>
+    <button><a href="https://www.google.com/">Google</a></button>
+    <button><a href="https://www.youtube.com/">youtube</a></button>
+    <button><a href="https://www.mmcoe.edu.in/">mmcoe</a></button>
+
+    <div id="bulb" class="bulbcontainer">
+        hey</div>
+    <script>
+        setInterval(async function() {
+            document.queryselector("#bulb").classList.toggle("bulb")
+        }, 300)
+    </script>
+
+
+    <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
