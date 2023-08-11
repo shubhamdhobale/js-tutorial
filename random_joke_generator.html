@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+        html {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
+            background-blend-mode: multiply, multiply;
+        }
+        
+        .jokes {
+            height: 60px;
+            width: 400px;
+            background-color: #121212;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+            left: 35%;
+        }
+        
+        .jokes h1 {
+            color: #7a7a7a;
+            padding: 10px;
+        }
+        
+        #joke {
+            height: 100px;
+            width: 600px;
+            background-color: #121212;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+            left: 27%;
+            color: #ababab;
+            margin-top: 30px;
+            padding-top: 20px;
+        }
+        
+        .btn {
+            height: 70px;
+            width: 150px;
+            position: absolute;
+            left: 43%;
+            top: 25%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jokes">
+        <h1>Random Joke Generator</h1>
+    </div>
+
+    <div id="joke">
+
+    </div>
+    <div class="btn"> <button type="button" onClick="window.location.reload();">Click to see joke</button></div>
+
+    <script src="script.js">
+        let myjokes = [{
+            "category": "Misc",
+            "type": "single",
+            "joke": "Two reasons I don't give money to homeless people.\n1) They are going to spend it all on drugs and alcohol\n2) I am going to spend it all on drugs and alcohol.",
+            "flags": {
+                "nsfw": false,
+                "religious": false,
+                "political": false,
+                "racist": false,
+                "sexist": false,
+                "explicit": false
+            },
+            "id": 72,
+            "safe": false,
+            "lang": "en"
+        }, {
+            "category": "Programming",
+            "type": "single",
+            "joke": "Your momma is so fat, you need to switch to NTFS to store a picture of her.",
+            "flags": {
+                "nsfw": false,
+                "religious": false,
+                "political": false,
+                "racist": false,
+                "sexist": false,
+                "explicit": true
+            },
+            "id": 55,
+            "safe": false,
+            "lang": "en"
+        }, {
+            "category": "Misc",
+            "type": "single",
+            "joke": "Women are like KFC, once you're done with the breasts and thighs, you just have a greasy box to put your bone in.",
+            "flags": {
+                "nsfw": true,
+                "religious": false,
+                "political": false,
+                "racist": false,
+                "sexist": true,
+                "explicit": true
+            },
+            "id": 149,
+            "safe": false,
+            "lang": "en"
+        }, {
+            "category": "Dark",
+            "type": "single",
+            "joke": "I have a fish that can breakdance! Only for 20 seconds though, and only once.",
+            "flags": {
+                "nsfw": false,
+                "religious": false,
+                "political": false,
+                "racist": false,
+                "sexist": false,
+                "explicit": false
+            },
+            "id": 237,
+            "safe": false,
+            "lang": "en"
+        }, {
+            "category": "Pun",
+            "type": "single",
+            "joke": "I have these weird muscle spasms in my gluteus maximus.\nI figured out from my doctor that everything was alright:\nHe said \"Weird flex, butt okay.\"",
+            "flags": {
+                "nsfw": false,
+                "religious": false,
+                "political": false,
+                "racist": false,
+                "sexist": false,
+                "explicit": false
+            },
+            "id": 82,
+            "safe": false,
+            "lang": "en"
+        }, {
+            "category": "Programming",
+            "type": "single",
+            "joke": "I've got a really good UDP joke to tell you but I don’t know if you'll get it.",
+            "flags": {
+                "nsfw": false,
+                "religious": false,
+                "political": false,
+                "racist": false,
+                "sexist": false,
+                "explicit": false
+            },
+            "id": 0,
+            "safe": true,
+            "lang": "en"
+        }, {
+            "category": "Misc",
+            "type": "single",
+            "joke": "What does the MacBook have in common with Donald Trump?\n\nI would tell you....\nBut I don't compare apples to oranges.",
+            "flags": {
+                "nsfw": false,
+                "religious": false,
+                "political": true,
+                "racist": false,
+                "sexist": false,
+                "explicit": false
+            },
+            "id": 233,
+            "safe": false,
+            "lang": "en"
+        }, {
+            "category": "Programming",
+            "type": "single",
+            "joke": "Debugging is like being the detective in a crime movie where you're also the murderer at the same time.",
+            "flags": {
+                "nsfw": false,
+                "religious": false,
+                "political": false,
+                "racist": false,
+                "sexist": false,
+                "explicit": false
+            },
+            "id": 42,
+            "safe": true,
+            "lang": "en"
+        }, {
+            "category": "Programming",
+            "type": "single",
+            "joke": "UDP is better in the COVID era since it avoids unnecessary handshakes.",
+            "flags": {
+                "nsfw": false,
+                "religious": false,
+                "political": false,
+                "racist": false,
+                "sexist": false,
+                "explicit": false
+            },
+            "id": 259,
+            "safe": true,
+            "lang": "en"
+        }, {
+            "category": "Programming",
+            "type": "single",
+            "joke": "If Bill Gates had a dime for every time Windows crashed ... Oh wait, he does.",
+            "flags": {
+                "nsfw": false,
+                "religious": false,
+                "political": false,
+                "racist": false,
+                "sexist": false,
+                "explicit": false
+            },
+            "id": 22,
+            "safe": true,
+            "lang": "en"
+        }]
+
+
+        let index = Math.floor(Math.random() * (myjokes.length - 1))
+        console.log(index)
+        joke.innerHTML = myjokes[index].joke
+
+        function refreshPage() {
+            window.location.reload();
+        }
+    </script>
+
+    <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
