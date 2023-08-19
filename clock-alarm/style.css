@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    padding-top: 50px;
+}
+
+body {
+    border: 3px dotted rgba(255, 255, 255, 0.648);
+    border-radius: 20px;
+    padding: 40px;
+    width: 60%;
+    height: 400px;
+    margin: 0 auto;
+    background: #485563;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #29323c, #485563);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #29323c, #485563);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#clock {
+    height: 120px;
+    font-size: 40px;
+    font-family: arial;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 197, 197);
+}
+
+h2 {
+    text-align: center;
+}
+
+#alarm-container {
+    text-align: center;
+    font-family: Verdana;
+    font-size: 0.6em;
+    padding: 0.7em;
+    color: rgb(255, 197, 197);
+}
+
+label {
+    display: inline-block;
+}
+
+.timeofday {
+    background-color: rgb(255, 197, 197);
+}
+
+.bigger {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#sounds {
+    text-align: center;
+    padding-top: 20px;
+}
+
+#setButton {
+    float: left;
+    background-color: rgba(205, 255, 205, 0.603);
+    margin-top: 10px;
+    border-radius: 5%;
+    height: 50px;
+    width: 100px;
+}
+
+#clearButton {
+    float: right;
+    background-color: rgba(255, 175, 175, 0.58);
+    margin-top: 10px;
+    border-radius: 5%;
+    height: 50px;
+    width: 100px;
+}
