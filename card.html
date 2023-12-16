@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .card {
+        border: 2px solid rgb(152, 151, 151);
+        display: flex;
+        margin: 5px;
+        gap: 20px;
+        padding: 10px;
+        width: 1200px;
+        background-color: rgba(208, 208, 208, 0.471);
+        border-radius: 10px
+    }
+    
+    .image {
+        position: relative;
+    }
+    
+    .image .capsule {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: black;
+        color: wheat;
+        padding: 3px;
+        border-radius: 3px;
+        font-size: 14px;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="image">
+                <img src="https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw" alt="">
+                <div class="capsule">31.55</div>
+            </div>
+            <div class="text">
+                <h1>Your first html website | Sigma web development course</h1>
+                <p>codewithharry . 980k views . 2 months old</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function createcard(title, cname, views, monthsold, duration, thumbnail) {
+
+            let viewstr;
+            if (views < 1000) {
+                viewstr = views;
+            } else if (views > 1000000) {
+                viewstr = views / 1000000 + "M"
+            } else {
+                viewstr = views / 1000 + "k"
+            }
+
+
+            let html = `<div class="card">
+            <div class="image">
+                <img src="${thumbnail}" alt="">
+                <div class="capsule">${duration}</div>
+            </div>
+            <div class="text">
+                <h1>${title}</h1>
+                <p>${cname} . ${viewstr} views . ${monthsold} months old</p>
+            </div>
+        </div>`
+
+            document.querySelector(".container").innerHTML = document.querySelector(".container").innerHTML + html;
+        }
+
+        createcard("Welcome backend development | Sigma web development course", "codewithharry", 780000, 3, "25.33", "https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw");
+    </script>
+</body>
+
+</html>
