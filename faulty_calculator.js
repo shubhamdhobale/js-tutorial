@@ -1,4 +1,10 @@
-
+/*Enter the two numbers
+  and perform the operations:-
+      "+" -> "-",
+       "*" ->  "+",
+       "-" -> "/",
+        "/" ->  "**"
+*/
         let a = prompt("Enter First number: ");
         let c = prompt("Enter operation: ");
         let b = prompt("Enter second number: ");
