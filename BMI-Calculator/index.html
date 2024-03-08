@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI-Calculator</title>
+    <style>
+        body {
+            background-color: rgb(37, 37, 37);
+            margin: 15% 33%;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 50% 20%;
+        }
+        
+        input[type="number"] {
+            background-color: rgb(236, 229, 229);
+            padding: 10px;
+            border-radius: 10px;
+            font-family: monospace;
+        }
+        
+        input[type="submit"] {
+            background-color: rgb(130, 187, 117);
+            padding: 10px;
+            border-radius: 10px;
+            color: black;
+            font-weight: 800;
+            font-size: medium;
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+        }
+        
+        span {
+            color: rgb(246, 174, 174);
+            font-size: medium;
+        }
+        
+        h1 {
+            color: aliceblue;
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+            font-weight: 800;
+            margin: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <h1>BMI Calculator</h1>
+        <input type="number" id="height" value="height" placeholder="Enter the height(cm)" />
+        <input type="number" id="weight" value="weight" placeholder="Enter the weight(kg)" />
+        <input type="submit" />
+        <span id="result"></span>
+    </form>
+    <script src="index.js "></script>
+</body>
+
+</html>
