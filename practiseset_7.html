@@ -1,73 +1,77 @@
-< !DOCTYPE html>
-    <html>
+<!DOCTYPE html>
+<html>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <title> replit
-            < /title>
-
-
-    </head>
-
-    <body>
-        <nav>
-            <ul>
-                <li>
-                    Home </li>
-                <li>
-                    About </li>
-                <li>
-                    Bog </li>
-        </nav>
-        <table>
-            <td>
-                home </td>
-            <td>
-                home </td>
-            <td>
-                home </td>
-            <tr> home 1
-                < /tr>
-                    <tr> home 2
-                        < /tr>
-                            <tr> home 3
-                                < /tr>
-                                    <tr> home 4
-                                        < /tr>
-        </table>
-
-        </ul>
-
-        <script>
-            //Q1
-            document.getElementsByTagName("nav")[0].firstElementChild.style.color = "black";
-
-            //Q2
-            /*We create a table with tbody.
-            then in view page source there is no tbody part
-            because view page source shows you row material that you returned.
-            In inspect , tbody is shown because it shows what actually it renders.
-            */
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title> replit
+        < /title>
 
 
-            //Q3
-            document.getElementsByTagName("nav")[0].firstElementChild.style.color = "red";
-            document.getElementsByTagName("nav")[0].firstElementChild.style.color = "green";
-            document.getElementsByTagName("nav")[0].lastElementChild.style.color = "green";
+</head>
 
-            //Q4
-            Array.from(document.getElementsByTagName("li")).forEach((element) => {
-                element.style.background = "red"
-            })
+<body>
+    <nav>
+        <ul>
+            <li>
+                Home </li>
+            <li>
+                About </li>
+            <li>
+                Bog </li>
 
-            //Q5
-            /*Which is used to look for farthest ancestor which matches given CSS selector?
-            .matches() , .closet() , .contains()
-            Ans is none of the above
-            */
-        </script>
+    </nav>
 
-    </body>
 
-    </html>
+    <table>
+        <td>
+            home </td>
+        <td>
+            home </td>
+        <td>
+            home </td>
+        <tr> home 1
+        </tr>
+        <tr> home 2
+        </tr>
+        <tr> home 3
+        </tr>
+        <tr> home 4
+        </tr>
+    </table>
+
+    </ul>
+
+    <script>
+        //Q1
+        document.getElementsByTagName("nav")[0].firstElementChild.style.color = "black";
+
+        //Q2
+        /*We create a table with tbody.
+        then in view page source there is no tbody part
+        because view page source shows you row material that you returned.
+        In inspect , tbody is shown because it shows what actually it renders.
+        */
+
+
+        //Q3
+        document.getElementsByTagName("nav")[0].firstElementChild.style.color = "red";
+        document.getElementsByTagName("nav")[0].firstElementChild.style.color = "green";
+        document.getElementsByTagName("nav")[0].lastElementChild.style.color = "green";
+        document.getElementsByTagName("nav")[0].lastElementChild.style.color = "red"
+
+        //Q4
+        Array.from(document.getElementsByTagName("li")).forEach((element) => {
+            element.style.background = "red"
+        })
+
+        //Q5
+        /*Which is used to look for farthest ancestor which matches given CSS selector?
+        .matches() , .closet() , .contains()
+        Ans is none of the above
+        */
+    </script>
+
+</body>
+
+</html>

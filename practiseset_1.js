@@ -10,7 +10,7 @@ console.log(typeof(a+b))
 
 //Q3
 const a1={
-  name :"Shubham",
+    name :"Shubham",
     div:"TEIT",
     Address:"manchar"
   

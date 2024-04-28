@@ -38,3 +38,4 @@ let n2 = ar.reduce((x1, x2) => {
     return x1 * x2
 })
 console.log(n2)
+
